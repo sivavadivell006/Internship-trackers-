@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+
+    <h2>Student List</h2>
+
+    <input type="text" id="studentInput" placeholder="Enter something">
+    <button id="addBtn">Add Students</button>
+
+    <ul id="studentList"></ul>
+
+    <script>
+        const input = document.getElementById("studentInput");
+        const button = document.getElementById("addBtn");
+        const list = document.getElementById("studentList");
+
+        button.addEventListener("click", function () {
+
+            const students = ["Arun", "Priya", "Karthik"];
+
+            students.forEach(function(name) {
+                const li = document.createElement("li");
+                li.textContent = name;
+                list.appendChild(li);
+            });
+
+            input.value = "";
+        });
+    </script>
+
+</body>
+</html>
